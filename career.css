@@ -1,0 +1,479 @@
+@charset "utf-8";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 10px;
+}
+.contain {
+  position: relative;
+  background: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contain:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* 当屏幕宽度不超过800px */
+@media only screen and (max-width:800px) {
+
+  .na,
+  .call,
+  .open a {
+    display: none;
+  }
+
+  /* 导航展示 */
+  input[type=checkbox]:checked~.na {
+    display: block;
+  }
+
+  .na {
+    width: 100%;
+    margin-top: 70px;
+    padding-right: 0 !important;
+    text-align: center;
+  }
+
+  .na .lead {
+    background: #29b078;
+    width: 100%;
+  }
+
+  .na .lead a {
+    margin-top: 20px;
+    height: 40px !important;
+    display: inline-block;
+  }
+
+  .lead:hover,
+  .lead:visited {
+    background: #47d197;
+  }
+
+  .lead a:hover::after {
+    content: "";
+    display: none;
+  }
+
+  .lore {
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+
+.main{
+  padding: 0 1rem 0 1rem !important;
+}
+
+
+.wrap,
+.wrap2{
+  width: 100% !important;
+}
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+/* 当屏幕宽度超过801px */
+@media only screen and (min-width: 801px) {
+
+  /* For mobile phones: */
+  .bar,
+  .lore {
+    display: none;
+  }
+
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* 头部客服热线以及微信、qq、微博小图标 */
+.top {
+  width: 100vw;
+  height: 45px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.call {
+  color: #42b683;
+}
+
+.header .open {
+  display: flex;
+}
+
+.open .wx,
+.qq,
+.weibo {
+  padding-left: 15px;
+}
+
+/* 登录和注册 */
+.lore {
+  position: absolute;
+  top: 10px;
+  width: 80px;
+  right: 0;
+}
+
+.login {
+  position: relative;
+}
+
+.login::after {
+  content: "";
+  width: 1px;
+  height: 12px;
+  display: inline-block;
+  background: #29b078;
+  position: absolute;
+  bottom: 2px;
+  right: -3px;
+}
+
+
+/* 导航栏 */
+/* 导航栏 */
+.navi {
+  position: relative;
+  background: #29b078;
+  width: 100vw;
+  line-height: 50px;
+}
+
+.na {
+  float: right;
+  padding-right: 20%;
+  background: #29b078;
+}
+
+.na .lead {
+  display: inline-block;
+  padding-right: 30px;
+  position: relative;
+}
+
+
+.navi .lead a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  height: 65px;
+}
+
+.lead a:hover::after {
+  content: "";
+  position: absolute;
+  /* display: inline-block; */
+  background: white;
+  width: 38px;
+  height: 3px;
+  bottom: -20px;
+  left: 0;
+}
+
+/* 当屏幕小于一定宽度时，出现导航按钮  */
+.dropdown {
+  width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.na-l {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+}
+
+.bar {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  float: right;
+  background: #47d197;
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+}
+
+.sbar {
+  margin: 9px 10px 9px 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  background: #2f8561;
+  width: 30px;
+  height: 4px;
+  margin-top: 10px;
+}
+
+/* 主体内容介绍 */
+.main {
+  padding: 0 15rem 0 15rem;
+}
+
+.title,
+.dire{
+  width: 70px;
+  display: inline-block;
+}
+
+.title,
+.direction {
+  margin-top: 30px;
+}
+
+.title span {
+  color: #29b078;
+}
+
+.hr1{
+  border: 1px solid #d0d6d9;
+}
+
+
+/* 职业方向  */
+.direction {
+  color: #a1a1a1;
+}
+
+.direction button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  color: black;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.direction button:hover {
+  background: #29b078;
+  color: white;
+  outline: none;
+}
+
+/* 职位介绍 */
+.species {
+  width: 150px;
+  height: 80px;
+  padding-top: 20px;
+}
+
+.species h4,
+.wrap h4 {
+  font-weight: 600;
+}
+
+/* 职业介绍列表 */
+.wrap {
+  width: 30rem;
+  display: inline-block;
+  background: #fff;
+  margin-top: 66px;
+  margin-right: 25px;
+  box-shadow: 1px 1px 1px 1px #eeeded;
+  border: 2px solid #edf1f2;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wrap img {
+  width: 10rem;
+  height: 10rem;
+  padding-right: 10px;
+}
+
+
+
+.line1 {
+  height: 173px;
+  padding: 2rem 1rem 2rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #edf1f2;
+  /* flex-flow: wrap; */
+
+}
+
+/* 资料表格 */
+table,
+.tips {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 1rem;
+  color: #999999;
+}
+
+table tr {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #edf1f2;
+}
+
+table td {
+  border-bottom: 1px solid #edf1f2;
+  padding-left: 1rem;
+}
+
+table td[name=online],
+td[name=online1] {
+  border-right: 1px solid #edf1f2;
+}
+
+table td[name=online1] {
+  text-align: center;
+}
+
+.table1 img {
+  width: 1.5rem;
+  height: 1.1rem;
+  /* position: absolute; */
+}
+
+td span {
+  color: #f01400;
+}
+
+td span[name=b],
+span[name=b1] {
+  color: black;
+}
+
+td span[name=b1] {
+  float: right;
+  padding-right: 1.2rem;
+}
+
+
+.people,
+.tips {
+  border-bottom: 1px solid #edf1f2;
+  line-height: 40px;
+  padding-left: 1rem;
+}
+
+.people span {
+  color: #f01400;
+}
+
+/* 鼠标放到岗位说明上展示的内容 */
+.wrap2 {
+  display: none;
+  width: 30rem;
+  height: 100%;
+  background: black;
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px 1px #eeeded;
+  color: white;
+  position: absolute;
+  top: 0;
+}
+
+.wrap:hover .wrap2 {
+  display: block;
+}
+
+.wrap2 p {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.wrap2 .ios {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+/* 底部footer */
+.footer {
+  background: #26a26f;
+  padding: 0 70px 0 70px;
+  display: flex;
+}
+
+/* 底部左边 */
+.footer .left,
+.center,
+.right {
+  color: white;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.footer .text {
+  padding-top: 50px;
+}
+
+.footer .left a {
+  position: relative;
+  font-size: 16px;
+  padding-right: 20px;
+  color: white;
+}
+
+.left .text .al::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  background: white;
+  width: 2px;
+  height: 16px;
+  margin-left: 10px;
+}
+
+/* 底部中间 */
+.footer .center .link {
+  padding-top: 20px;
+}
+
+.footer .center a {
+  color: white;
+  font-size: 16px;
+  padding-right: 15px;
+  line-height: 20px;
+}
+
+.footer .right {
+  text-align: center;
+}
+
+/* 版权说明 */
+.cr {
+  padding: 10px 0 10px 0;
+  background: #26a26f;
+  color: white;
+  text-align: center;
+}
